@@ -72,7 +72,7 @@ typedef struct{
 }SPI_DeviceT, *SPI_DevicePtr;
 
 /* SPI API's*/
-extern int Open_device(char *spi_dev_path, int *fd);
+extern int Open_device(const char *spi_dev_path, int *fd);
 extern int Set_SPI_mode(int fd, unsigned char spi_mode);
 extern int Set_SPI_bits(int fd, unsigned char bits_per_word);
 extern int Set_SPI_speed(int fd, unsigned long bus_speed_HZ);

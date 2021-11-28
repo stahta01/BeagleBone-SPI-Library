@@ -58,7 +58,7 @@ unsigned char RX_spi[SPIDEV_BYTES_NUM];
  * Params        @spi_dev_path: Path to the SPI device
  *               @fd: Variable to store the file handler
  ****************************************************************/
-int Open_device(char *spi_dev_path, int *fd)
+int Open_device(const char *spi_dev_path, int *fd)
 {
 	if((*fd = open(spi_dev_path, O_RDWR))<0)
 		return -1;
