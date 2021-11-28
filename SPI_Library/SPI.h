@@ -30,6 +30,11 @@ SOFTWARE.
 
 #include<stdint.h>
 
+#ifdef __cplusplus
+extern "C"
+{
+#endif // __cplusplus
+
 /* Generic Definitions */
 #define SPIDEV_BYTES_NUM                 8
 #define SPIDEV_DATA_BITS_NUM             8
@@ -82,5 +87,9 @@ extern int SPI_DEV1_init(unsigned long spi_bytes_no, unsigned long spi_bus_speed
 extern int SPIDEV1_transfer(unsigned char *send, unsigned char *receive,
                 unsigned char bytes_num);
 extern unsigned char SPIDEV1_single_transfer(unsigned char data_byte);
+
+#ifdef __cplusplus
+}
+#endif // __cplusplus
 
 #endif /* SPI_H_ */
